@@ -1,5 +1,5 @@
 /**
- * Synthesizes a card deck snap sound using Web Audio API.
+ * 
  */
 export const audioService = {
   playCardSound() {
@@ -13,11 +13,11 @@ export const audioService = {
       
       osc.type = 'sine';
       
-      // Frequency slides down quickly, mimicking paper friction / snap
+      
       osc.frequency.setValueAtTime(800, ctx.currentTime);
       osc.frequency.exponentialRampToValueAtTime(50, ctx.currentTime + 0.1);
       
-      // Volume decays fast
+    
       gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
       gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
       
